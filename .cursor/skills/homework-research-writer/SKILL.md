@@ -17,6 +17,7 @@ Use this skill when the user asks for help researching, planning, drafting, revi
 - Clearly separate researched facts from the user's opinions or argument.
 - If the user asks for a complete draft before giving their view, collect their view first or help them choose one.
 - After research is complete and the user's stance is captured, always ask whether the user wants an automatic draft before writing final prose.
+- Before drafting a new assignment, inspect prior teacher feedback in `feedback/` if that folder exists and adjust the work accordingly.
 - Treat the homework number as important context and save completed homework in `homework/HW-x.md`.
 
 ## Intake Workflow
@@ -35,12 +36,26 @@ Start by collecting the missing assignment details:
 
 All homework assignments are named `HW-x`, where `x` is the homework number. If the user does not provide the number, ask for it. If the user does not know the number, inspect existing files matching `homework/HW-*.md` and use the next available number.
 
+After the homework number is known or chosen, check whether a top-level `feedback/` folder exists. If it exists, inspect readable feedback files before research and drafting. Prefer files that look related to previous homework assignments, such as `feedback/HW-*.md`, `feedback/HW-*.txt`, or other readable text files in that folder. If the current homework number is known, prioritize feedback from earlier homework numbers.
+
 If the user does not know what they think yet:
 
 - Research the topic first.
 - Present 2-3 reasonable positions or thesis options.
 - Ask the user which option best matches their view, or how they want to modify it.
 - Do not write the final draft until the user's stance is captured.
+
+## Previous Feedback Workflow
+
+If previous feedback exists in `feedback/`:
+
+- Briefly summarize recurring teacher comments, correction points, grading preferences, or style guidance.
+- Apply relevant feedback to the thesis, outline, paragraph structure, source use, citations, tone, and final checklist.
+- Let the current assignment prompt, rubric, and teacher restrictions override older feedback when they conflict.
+- Do not guess at unclear feedback; state the uncertainty and use only the parts that are clear.
+- If feedback mentions problems to avoid, explicitly check for those problems before finalizing.
+
+If no `feedback/` folder or readable feedback files exist, continue normally without blocking the workflow.
 
 ## Research Workflow
 
@@ -83,13 +98,14 @@ If the user says no:
 Work in stages unless the user explicitly asks for only one stage. Even in a shortened flow, keep the user's stance and auto-draft checkpoint before final prose:
 
 1. Restate the assignment constraints.
-2. Share brief research notes with source links.
-3. Propose or refine a thesis based on the user's view.
-4. Ask whether the user wants an automatic draft.
-5. If yes, create an outline sized to the required length.
-6. Draft concise prose that matches the class level and assignment format.
-7. Check the result against length, citations, prompt coverage, and restrictions.
-8. Save or update the homework markdown file in `homework/HW-x.md`.
+2. Inspect previous feedback in `feedback/` if it exists and summarize applicable guidance.
+3. Share brief research notes with source links.
+4. Propose or refine a thesis based on the user's view and any relevant feedback.
+5. Ask whether the user wants an automatic draft.
+6. If yes, create an outline sized to the required length.
+7. Draft concise prose that matches the class level, assignment format, and relevant feedback.
+8. Check the result against length, citations, prompt coverage, restrictions, and feedback issues to avoid.
+9. Save or update the homework markdown file in `homework/HW-x.md`.
 
 For `1-2 pages`, target roughly 300-650 words unless the user or assignment gives a different word count. Keep the structure compact: introduction, 2-4 body paragraphs, and conclusion.
 
@@ -106,6 +122,7 @@ Each homework markdown file should include enough context for future reference:
 - Homework number and title, if known
 - Assignment prompt and restrictions
 - User's stated opinion, thesis, or personal angle
+- Previous feedback used, if any
 - Research notes and source links
 - Final draft
 - Citation or reference list
