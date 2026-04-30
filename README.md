@@ -35,7 +35,7 @@ The skill is designed to:
 All homework files should be saved in:
 
 ```text
-homeWork/
+homework/
 ```
 
 Use this filename format:
@@ -47,11 +47,11 @@ HW-x.md
 Examples:
 
 ```text
-homeWork/HW-1.md
-homeWork/HW-2.md
-homeWork/HW-3.md
+homework/HW-1.md
+homework/HW-2.md
+homework/HW-3.md
 ```
 
-If you do not know the homework number, ask Cursor to inspect existing `homeWork/HW-*.md` files and choose the next available number.
+If you do not know the homework number, ask Cursor to inspect existing `homework/HW-*.md` files and choose the next available number.
 
 Each homework file should include the prompt, restrictions, your opinion or thesis, research notes, source links, final draft, citations, and a checklist.

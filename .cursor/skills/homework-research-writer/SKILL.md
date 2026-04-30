@@ -16,7 +16,7 @@ Use this skill when the user asks for help researching, planning, drafting, revi
 - Default to APA citations when the assignment does not specify a citation style.
 - Clearly separate researched facts from the user's opinions or argument.
 - If the user asks for a complete draft before giving their view, collect their view first or help them choose one.
-- Treat the homework number as important context and save completed homework in `homeWork/HW-x.md`.
+- Treat the homework number as important context and save completed homework in `homework/HW-x.md`.
 
 ## Intake Workflow
 
@@ -32,7 +32,7 @@ Start by collecting the missing assignment details:
 - Homework number, if known
 - The user's current thoughts, opinion, thesis idea, or personal angle
 
-All homework assignments are named `HW-x`, where `x` is the homework number. If the user does not provide the number, ask for it. If the user does not know the number, inspect existing files matching `homeWork/HW-*.md` and use the next available number.
+All homework assignments are named `HW-x`, where `x` is the homework number. If the user does not provide the number, ask for it. If the user does not know the number, inspect existing files matching `homework/HW-*.md` and use the next available number.
 
 If the user does not know what they think yet:
 
@@ -65,15 +65,15 @@ Work in stages unless the user explicitly asks for only one stage:
 4. Create an outline sized to the required length.
 5. Draft concise prose that matches the class level and assignment format.
 6. Check the result against length, citations, prompt coverage, and restrictions.
-7. Save or update the homework markdown file in `homeWork/HW-x.md`.
+7. Save or update the homework markdown file in `homework/HW-x.md`.
 
 For `1-2 pages`, target roughly 300-650 words unless the user or assignment gives a different word count. Keep the structure compact: introduction, 2-4 body paragraphs, and conclusion.
 
 ## Homework Archive
 
-- Store homework files in the `homeWork/` folder.
+- Store homework files in the `homework/` folder.
 - Use the exact filename pattern `HW-x.md`, such as `HW-1.md`, `HW-2.md`, or `HW-3.md`.
-- Create `homeWork/` if it does not exist when saving an assignment.
+- Create `homework/` if it does not exist when saving an assignment.
 - Write a new file for a new homework assignment, or update the existing matching file when revising.
 - Do not overwrite an existing `HW-x.md` for a different assignment; warn the user and ask before replacing unrelated content.
 
@@ -103,4 +103,4 @@ Each homework markdown file should include enough context for future reference:
 - Default citation style: APA.
 - Match the requested length before adding extra background.
 - End with a brief checklist showing how the answer satisfies the prompt and restrictions.
-- Save the final homework record to `homeWork/HW-x.md`.
+- Save the final homework record to `homework/HW-x.md`.
