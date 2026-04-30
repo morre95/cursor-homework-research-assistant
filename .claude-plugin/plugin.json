@@ -1,0 +1,12 @@
+{
+  "name": "homework-research-assistant",
+  "version": "1.0.0",
+  "description": "Claude Code skill for homework research, outlining, drafting, and revision with user-opinion intake and current-source research.",
+  "keywords": [
+    "homework",
+    "research",
+    "writing",
+    "citations",
+    "academic-integrity"
+  ]
+}
