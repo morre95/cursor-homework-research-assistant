@@ -16,6 +16,7 @@ Use this skill when the user asks for help researching, planning, drafting, revi
 - Default to APA citations when the assignment does not specify a citation style.
 - Clearly separate researched facts from the user's opinions or argument.
 - If the user asks for a complete draft before giving their view, collect their view first or help them choose one.
+- After research is complete and the user's stance is captured, always ask whether the user wants an automatic draft before writing final prose.
 - Treat the homework number as important context and save completed homework in `homework/HW-x.md`.
 
 ## Intake Workflow
@@ -55,17 +56,40 @@ When the assignment requires only provided sources:
 - Use only those sources for the assignment answer.
 - You may ask the user whether background web research is allowed for understanding, but do not cite outside research in the assignment unless permitted.
 
+## Auto-Draft Checkpoint
+
+After sharing research notes and confirming the user's stance, ask:
+
+```text
+Do you want me to auto-draft the homework now using your stance and the research notes?
+```
+
+If the user says yes:
+
+- Create a length-appropriate outline.
+- Draft the homework in the user's stated direction and at the requested class level.
+- Include citations and a reference list when sources are used.
+- Check prompt coverage, restrictions, length, and citation requirements.
+- Save or update the completed homework record in `homework/HW-x.md`.
+
+If the user says no:
+
+- Stop before writing final prose.
+- Offer to keep only the research notes, create an outline, or revise the thesis.
+- Do not save a completed final draft unless the user later asks for one.
+
 ## Writing Workflow
 
-Work in stages unless the user explicitly asks for only one stage:
+Work in stages unless the user explicitly asks for only one stage. Even in a shortened flow, keep the user's stance and auto-draft checkpoint before final prose:
 
 1. Restate the assignment constraints.
 2. Share brief research notes with source links.
 3. Propose or refine a thesis based on the user's view.
-4. Create an outline sized to the required length.
-5. Draft concise prose that matches the class level and assignment format.
-6. Check the result against length, citations, prompt coverage, and restrictions.
-7. Save or update the homework markdown file in `homework/HW-x.md`.
+4. Ask whether the user wants an automatic draft.
+5. If yes, create an outline sized to the required length.
+6. Draft concise prose that matches the class level and assignment format.
+7. Check the result against length, citations, prompt coverage, and restrictions.
+8. Save or update the homework markdown file in `homework/HW-x.md`.
 
 For `1-2 pages`, target roughly 300-650 words unless the user or assignment gives a different word count. Keep the structure compact: introduction, 2-4 body paragraphs, and conclusion.
 
@@ -90,6 +114,7 @@ Each homework markdown file should include enough context for future reference:
 ## Academic Integrity
 
 - Preserve the user's voice and argument.
+- Do not write final homework prose from research alone; use the user's stated stance or the thesis option they selected.
 - Do not invent personal experiences, interviews, source details, quotes, citations, or page numbers.
 - Do not claim the user read a source unless the user says so.
 - If a direct quote is useful, keep it short and cite it.
