@@ -1,6 +1,6 @@
 ---
 name: homework-research-writer
-description: Use when helping with homework essays, short research papers, written assignments, outlines, drafts, or revisions. Guides the agent to research current information, ask for the user's own thoughts and opinions, respect assignment restrictions such as page limits, and support academic integrity.
+description: Helps with homework essays, research papers, written assignments, outlines, drafts, citations, revisions, and teacher feedback. Use when the user asks for school writing help, essay research, thesis development, source summaries, academic drafting, or homework revision.
 ---
 
 # Homework Research Writer
@@ -16,133 +16,24 @@ Use this skill when the user asks for help researching, planning, drafting, revi
 - Default to APA citations when the assignment does not specify a citation style.
 - Clearly separate researched facts from the user's opinions or argument.
 - If the user asks for a complete draft before giving their view, collect their view first or help them choose one.
-- After research is complete and the user's stance is captured, always ask whether the user wants an automatic draft before writing final prose.
+- If the user has already explicitly asked for a draft and has provided a stance or selected a thesis option, proceed without asking the auto-draft question again.
 - Before drafting a new assignment, inspect prior teacher feedback in `feedback/` if that folder exists and adjust the work accordingly.
 - Treat the homework number as important context and save completed homework in `homework/HW-x.md`.
 
-## Intake Workflow
+## Workflow Summary
 
-Start by collecting the missing assignment details:
+1. Collect the assignment prompt, constraints, citation/source requirements, class context, homework number, and the user's current stance or angle.
+2. Determine the `HW-x` number. If unknown, inspect existing `homework/HW-*.md` files and use the next available number.
+3. Check prior teacher feedback before research and drafting. See [feedback-workflow.md](feedback-workflow.md).
+4. Research the topic or use only provided sources when the assignment requires it. See [research-guidelines.md](research-guidelines.md).
+5. Present research notes and help the user choose or refine a thesis if needed.
+6. Ask the auto-draft checkpoint before final prose unless the user already asked for a draft and provided a stance.
+7. Draft, cite, check, and save the final homework record only after the user's stance is captured.
 
-- Assignment prompt or question
-- Required length, such as `1-2 pages`, word count, or paragraph count
-- Required citation style, if any
-- Required number or type of sources
-- Class level and subject
-- Deadline, if it affects depth or scope
-- Teacher restrictions, rubric notes, or banned sources
-- Homework number, if known
-- The user's current thoughts, opinion, thesis idea, or personal angle
+## Reference Files
 
-All homework assignments are named `HW-x`, where `x` is the homework number. If the user does not provide the number, ask for it. If the user does not know the number, inspect existing files matching `homework/HW-*.md` and use the next available number.
-
-After the homework number is known or chosen, check whether a top-level `feedback/` folder exists. If it exists, inspect readable feedback files before research and drafting. Prefer files that look related to previous homework assignments, such as `feedback/HW-*.md`, `feedback/HW-*.txt`, or other readable text files in that folder. If the current homework number is known, prioritize feedback from earlier homework numbers.
-
-If the user does not know what they think yet:
-
-- Research the topic first.
-- Present 2-3 reasonable positions or thesis options.
-- Ask the user which option best matches their view, or how they want to modify it.
-- Do not write the final draft until the user's stance is captured.
-
-## Previous Feedback Workflow
-
-If previous feedback exists in `feedback/`:
-
-- Briefly summarize recurring teacher comments, correction points, grading preferences, or style guidance.
-- Apply relevant feedback to the thesis, outline, paragraph structure, source use, citations, tone, and final checklist.
-- Let the current assignment prompt, rubric, and teacher restrictions override older feedback when they conflict.
-- Do not guess at unclear feedback; state the uncertainty and use only the parts that are clear.
-- If feedback mentions problems to avoid, explicitly check for those problems before finalizing.
-
-If no `feedback/` folder or readable feedback files exist, continue normally without blocking the workflow.
-
-## Research Workflow
-
-- Use web search for up-to-date information on the topic.
-- Prefer credible sources: government, academic, major institutions, reputable news, books, journals, or official organizations.
-- Avoid weak sources unless the assignment specifically asks for popular opinion, social media, or informal examples.
-- Track source titles, authors or organizations, publication dates, URLs, and access dates when useful.
-- Summarize source findings in plain language before using them in an outline or draft.
-- Note uncertainty when sources disagree or when evidence is limited.
-
-When the assignment requires only provided sources:
-
-- Use only those sources for the assignment answer.
-- You may ask the user whether background web research is allowed for understanding, but do not cite outside research in the assignment unless permitted.
-
-## Auto-Draft Checkpoint
-
-After sharing research notes and confirming the user's stance, ask:
-
-```text
-Do you want me to auto-draft the homework now using your stance and the research notes?
-```
-
-If the user says yes:
-
-- Create a length-appropriate outline.
-- Draft the homework in the user's stated direction and at the requested class level.
-- Include citations and a reference list when sources are used.
-- Check prompt coverage, restrictions, length, and citation requirements.
-- Save or update the completed homework record in `homework/HW-x.md`.
-
-If the user says no:
-
-- Stop before writing final prose.
-- Offer to keep only the research notes, create an outline, or revise the thesis.
-- Do not save a completed final draft unless the user later asks for one.
-
-## Writing Workflow
-
-Work in stages unless the user explicitly asks for only one stage. Even in a shortened flow, keep the user's stance and auto-draft checkpoint before final prose:
-
-1. Restate the assignment constraints.
-2. Inspect previous feedback in `feedback/` if it exists and summarize applicable guidance.
-3. Share brief research notes with source links.
-4. Propose or refine a thesis based on the user's view and any relevant feedback.
-5. Ask whether the user wants an automatic draft.
-6. If yes, create an outline sized to the required length.
-7. Draft concise prose that matches the class level, assignment format, and relevant feedback.
-8. Check the result against length, citations, prompt coverage, restrictions, and feedback issues to avoid.
-9. Save or update the homework markdown file in `homework/HW-x.md`.
-
-For `1-2 pages`, target roughly 300-650 words unless the user or assignment gives a different word count. Keep the structure compact: introduction, 2-4 body paragraphs, and conclusion.
-
-## Homework Archive
-
-- Store homework files in the `homework/` folder.
-- Use the exact filename pattern `HW-x.md`, such as `HW-1.md`, `HW-2.md`, or `HW-3.md`.
-- Create `homework/` if it does not exist when saving an assignment.
-- Write a new file for a new homework assignment, or update the existing matching file when revising.
-- Do not overwrite an existing `HW-x.md` for a different assignment; warn the user and ask before replacing unrelated content.
-
-Each homework markdown file should include enough context for future reference:
-
-- Homework number and title, if known
-- Assignment prompt and restrictions
-- User's stated opinion, thesis, or personal angle
-- Previous feedback used, if any
-- Research notes and source links
-- Final draft
-- Citation or reference list
-- Final checklist against the prompt and restrictions
-
-## Academic Integrity
-
-- Preserve the user's voice and argument.
-- Do not write final homework prose from research alone; use the user's stated stance or the thesis option they selected.
-- Do not invent personal experiences, interviews, source details, quotes, citations, or page numbers.
-- Do not claim the user read a source unless the user says so.
-- If a direct quote is useful, keep it short and cite it.
-- Prefer paraphrase with citation over excessive quotation.
-- If the user asks to bypass learning, grading rules, plagiarism checks, or source requirements, redirect to research notes, outline, or tutoring-style help.
-
-## Output Defaults
-
-- Use clear headings only when appropriate for the assignment.
-- Include citations and a short reference list when sources are used.
-- Default citation style: APA.
-- Match the requested length before adding extra background.
-- End with a brief checklist showing how the answer satisfies the prompt and restrictions.
-- Save the final homework record to `homework/HW-x.md`.
+- For source selection, research notes, and citation defaults, read [research-guidelines.md](research-guidelines.md).
+- For preserving the user's voice and avoiding academic-integrity problems, read [academic-integrity.md](academic-integrity.md).
+- For applying prior teacher comments, read [feedback-workflow.md](feedback-workflow.md).
+- For saved homework filenames and record structure, read [archive-format.md](archive-format.md).
+- For intake, drafting, auto-draft, and final review steps, read [draft-checklist.md](draft-checklist.md).
