@@ -4,7 +4,7 @@
 
 ## Inledning
 
-Moderna AI-system kräver mycket el eftersom de bygger på enorma mängder datakraft. Stora språkmodeller tränas på mycket data, med många parametrar och tusentals eller tiotusentals GPU:er. Sen näör moidellen tas i bruk så fortsätter elförbrukningen. Min ståndpunkt är att AI:s elförbrukning kan vara försvarbar, men bara under vissa villkor: datacenter bör byggas där elen är fossilfri, företagen bör betala för den nätkapacitet de kräver, och delar av AI-arbetet bör kunna flyttas till tider och platser där elen är ren och billig.
+Moderna AI-system kräver mycket el eftersom de bygger på enorma mängder datakraft. Stora språkmodeller tränas på mycket data, med många parametrar och tusentals eller tiotusentals GPU:er. Sen när modellen tas i bruk så fortsätter elförbrukningen. Min ståndpunkt är att AI:s elförbrukning kan vara försvarbar, men bara under vissa villkor: datacenter bör byggas där elen är fossilfri, företagen bör betala för den nätkapacitet de kräver, och delar av AI-arbetet bör kunna flyttas till tider och platser där elen är ren och billig.
 
 ## Vad är det som gör att AI kräver så mycket el
 
@@ -24,21 +24,21 @@ Ett modernt större datacenter kan dra tiotals eller hundratals MW. De största 
 
 ## Stabil el, volatil el och buffertar
 
-Olika energislag fungerar olika i elnätet. Sol och vind är svåra att beräkna, eftersom de beror på väder och tid på dygnet. De är billiga och har låga utsläpp, men de skapar svängningar som måste balanseras. Kärnkraft är stabil och fossilfri, men fungerar bäst som planerbar baskraft snarare än snabb reglerkraft. Vattenkraft med magasin är särskilt värdefull eftersom den både är fossilfri och kan regleras snabbt. Fossil gas är också reglerbar och kan balansera vind och sol, men den ger stora CO2-utsläpp och bör därför inte vara huvudlösningen.
+Olika energislag fungerar olika i elnätet. Sol och vind är svåra att beräkna, eftersom de beror på väder och tid på dygnet. De är billiga och har låga utsläpp, men de skapar svängningar som måste balanseras. Kärnkraft är stabil och fossilfri, men fungerar bäst som planer bar baskraft snarare än snabb reglerkraft. Vattenkraft med magasin är särskilt värdefull eftersom den både är fossilfri och kan regleras snabbt. Fossil gas är också reglerbar och kan balansera vind och sol, men den ger stora CO2-utsläpp och bör därför inte vara huvudlösningen.
 
 Datacenter skulle kunna öka andelen sol och vind om de blir mer flexibla. Alla AI-jobb är inte lika brådskande. Träning, batchjobb, videobearbetning och vissa bakgrundsuppgifter kan flyttas till timmar när det blåser mycket eller solen skiner. De kan också flyttas geografiskt mellan datacenter i olika elområden. Däremot är vanlig användning lite svårare att flytta då användaren oftast väntar på svar. Datacenter är därför beroende av elavtal, mjukvara och flexibla nätregler för att de ska vara lönsamma.
 
 ## Sverige exporterar el men säger ändå nej
 
-Det äör lite motsägelse fullt att Sverige exporterar el samtidigt som företag får nej till att bygga datacenter på grund av elbrist. Detta beror inte bara på vilken årskapacitet eltillverkningen har utan snareare på effekt och kapacitet. Sverige exporterade cirka 33.4 TWh netto 2024, men tyvärr produceras inet alltid elen där den behövs och häller inte alltid vid rätt tidpunkt. Norra Sverige har ofta överskott, medan södra och mellersta Sverige kan ha kapacitetsproblem. Elnätet har flaskhalsar mellan elområden och lokala nät kan vara fulla medans andra kan har mycket kapacitet över.
+Det är lite motsägelse fullt att Sverige exporterar el samtidigt som företag får nej till att bygga datacenter på grund av elbrist. Detta beror inte bara på vilken årskapacitet eltillverkningen har utan snarare på effekt och kapacitet. Sverige exporterade cirka 33.4 TWh netto 2024, men tyvärr produceras inet alltid elen där den behövs och häller inte alltid vid rätt tidpunkt. Norra Sverige har ofta överskott, medan södra och mellersta Sverige kan ha kapacitetsproblem. Elnätet har flaskhalsar mellan elområden och lokala nät kan vara fulla medans andra kan har mycket kapacitet över.
 
 Ett datacenter kräver dessutom garanterad effekt dygnet runt. Det räcker inte att Sverige i genomsnitt producerar mer el än landet använder. Om ett företag vill ansluta hundratals MW i ett område där nätet redan är ansträngt kan anslutningen ändå nekas. Här är något jag tycker datacenterföretag bör ta sitt ansvar i större utsträckning och betala för att förstärka upp nätet och gärna bidra med egen produktion eller flexibilitet.
 
 ## Datacenter i satelliter
 
-Elon Musk har föreslagit datacenter i rymden, i form av satelliter. Tanken är att rymden erbjuder nästan konstant solenergi, inga markkonflikter och ingen vanlig elnätsbegränsning. Satelliter skulle kunna drivas av solpaneler och möjligen kyla bort värme genom att stråla ut den i rymden. Detta kasnke kan låter lockande eftersom energi och kylning är två av de största problemen för AI-datacenter på jorden.
+Elon Musk har föreslagit datacenter i rymden, i form av satelliter. Tanken är att rymden erbjuder nästan konstant solenergi, inga markkonflikter och ingen vanlig elnätsbegränsning. Satelliter skulle kunna drivas av solpaneler och möjligen kyla bort värme genom att stråla ut den i rymden. Detta kanske kan låter lockande eftersom energi och kylning är två av de största problemen för AI-datacenter på jorden.
 
-Nackdelarna är ändå stora. Det är dyrt att skjuta upp hårdvara, svårt att reparera trasiga komponenter, och elektronik i rymden utsätts för strålning. Rymdskrot och kollisioner är också risker. Dessutom försvinner inte värmeproblemet bara för att systemet är i rymden. Eftersom vakum inte kan leda värme så behöver man strålas bort värmen med stora radiatorer. Latens och dataöverföring kan också bli problem. Därför ser satellitdatacenter mer ut som en möjlig framtidsidé än en lösning på AI:s energiproblem de närmaste åren.
+Nackdelarna är ändå stora. Det är dyrt att skjuta upp hårdvara, svårt att reparera trasiga komponenter, och elektronik i rymden utsätts för strålning. Rymdskrot och kollisioner är också risker. Dessutom försvinner inte värmeproblemet bara för att systemet är i rymden. Eftersom vakuum inte kan leda värme så behöver man strålas bort värmen med stora radiatorer. Latens och dataöverföring kan också bli problem. Därför ser satellitdatacenter mer ut som en möjlig framtidsidé än en lösning på AI:s energiproblem de närmaste åren.
 
 ## Risker, geopolitik och rättvisa
 
@@ -57,4 +57,5 @@ Elbehovet kommer sannolikt att öka. IEA räknar med att datacenters elanvändni
 ## Avslutning
 
 AI:s energiförbrukning är stor och kommer troligen att växa. Men slutsatsen bör inte vara att all AI är ohållbar. Den rimligare slutsatsen är att AI måste behandlas som tung industri. Den behöver fossilfri el, starka elnät, effektiv kylning, öppen rapportering och ekonomiskt ansvar. Datacenter i Norden kan vara bättre än datacenter i varma fossilberoende regioner, men bara om de byggs utan att skapa lokala elproblem. För mig är den bästa vägen framåt inte att stoppa AI, utan att göra energikraven synliga och styra utvecklingen mot mindre, effektivare och mer flexibla system.
+
 
