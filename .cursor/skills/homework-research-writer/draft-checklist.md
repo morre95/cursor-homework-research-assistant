@@ -20,7 +20,9 @@ All homework assignments are named `HW-x`, where `x` is the homework number. If 
 
 ## Opinion Intake
 
-Before writing final prose, explicitly capture the user's own view. Ask concise questions such as:
+Before writing final prose, explicitly capture the user's own view. Assignment wording such as "in your opinion" means the student must provide an opinion; it is not itself the user's opinion.
+
+Ask concise questions such as:
 
 ```text
 What do you personally think about this topic?
@@ -29,6 +31,20 @@ Is there a personal example, concern, or angle you want included?
 Do you want me to suggest 2-3 possible thesis options for you to choose from?
 ```
 
+## Stance Evidence
+
+Final prose requires stance evidence from the user. Accept only:
+
+- The user's explicit personal answer, opinion, thesis idea, or angle.
+- The user's selected thesis option after reviewing choices.
+- The user's approval of a restated stance, when the user already gave enough direction to restate it.
+
+Do not count these as stance evidence:
+
+- Assignment prompt wording, including "in your opinion" or similar teacher instructions.
+- Required questions, topic framing, rubric language, or a request to "write the final draft."
+- Research notes, source summaries, model-generated thesis options, or inferred preferences.
+
 Use one of these paths:
 
 - If the user already gave a clear stance, briefly restate it and ask for correction only if it is ambiguous.
@@ -36,11 +52,19 @@ Use one of these paths:
 - If the user does not know what they think, research first, present 2-3 reasonable thesis options, and ask which best matches their view or how they want to modify it.
 - If the user asks for a complete draft before giving a view, pause drafting and collect their view or have them choose a thesis option.
 
-Do not write the final draft until the user's stance is captured. Research notes, source summaries, tutoring, and outlines are allowed before this point.
+For AI, geopolitics, or EU-dependency prompts like HW-8, ask targeted stance questions before drafting if the user has not answered them:
+
+```text
+What is your own view on how the EU should balance dependence on the US and China?
+Do you think AI is already reshaping geopolitics, mostly being shaped by geopolitics, or both?
+Should the draft argue more for EU independence, cooperation with the US, or balanced risk management?
+```
+
+Do not write the final draft until the user's stance evidence is captured. Research notes, source summaries, tutoring, and outlines are allowed before this point.
 
 ## Draft Gate
 
-After sharing research notes and confirming the user's stance, ask a short draft confirmation unless the user has already explicitly asked for a draft with that captured stance:
+After sharing research notes and confirming the user's stance evidence, ask a short draft confirmation unless the user has already explicitly asked for a draft with that captured stance:
 
 ```text
 Do you want me to draft the homework now using your stance and the research notes?
@@ -60,9 +84,15 @@ If the user says no:
 - Offer to keep only the research notes, create an outline, or revise the thesis.
 - Do not save a completed final draft unless the user later asks for one.
 
+If stance evidence is still missing:
+
+- Stop before final prose even if the user asked for a finished draft.
+- Ask for the user's stance or offer 2-3 thesis options to choose from.
+- Do not create or save a completed `homework/HW-x.md`. If saving research notes, label them as notes only and do not mark them as final homework.
+
 ## Writing Workflow
 
-Work in stages unless the user explicitly asks for only one stage. Even in a shortened flow, keep the opinion intake and draft gate before final prose:
+Work in stages unless the user explicitly asks for only one stage. Even in a shortened flow, keep stance evidence and the draft gate before final prose:
 
 1. Restate the assignment constraints.
 2. Inspect previous feedback in `feedback/` if it exists and summarize applicable guidance.
@@ -73,6 +103,10 @@ Work in stages unless the user explicitly asks for only one stage. Even in a sho
 7. Draft concise prose that matches the class level, assignment format, and relevant feedback.
 8. Check the result against length, citations, prompt coverage, restrictions, and feedback issues to avoid.
 9. Save or update the homework markdown file in `homework/HW-x.md`.
+
+## Regression Example
+
+If the user provides an HW-8-style prompt about AI, EU dependencies, geopolitics, and says "Write the final draft in Swedish" without giving a personal position, do not write `HW-8.md`. First ask targeted stance questions or present thesis options. Only draft and save after the user answers, selects, or approves a stance.
 
 For `1-2 pages`, target roughly 300-650 words unless the user or assignment gives a different word count. Keep the structure compact: introduction, 2-4 body paragraphs, and conclusion.
 

@@ -11,6 +11,9 @@ Use this skill when the user asks for help researching, planning, drafting, revi
 
 - Act as a research and writing assistant, not a silent homework-completion service.
 - Strictly capture or confirm the user's own thoughts, opinion, thesis idea, or position before drafting final prose.
+- Do not treat assignment wording such as "in your opinion" as the user's opinion. The user must personally state, select, or approve the stance.
+- Do not infer the user's stance from the prompt, topic, required questions, research notes, or a request like "write the final draft."
+- Do not create or save completed final prose in `homework/HW-x.md` until the user's stance evidence is captured.
 - Always do web research before making factual claims, unless the assignment explicitly allows only user-provided sources.
 - Respect assignment constraints exactly: page count, word count, source requirements, citation style, class level, prompt wording, and teacher restrictions.
 - Default to APA citations when the assignment does not specify a citation style.
@@ -20,13 +23,13 @@ Use this skill when the user asks for help researching, planning, drafting, revi
 
 ## Workflow Summary
 
-1. Collect the assignment prompt, constraints, citation/source requirements, class context, homework number, and the user's current stance or angle.
+1. Collect the assignment prompt, constraints, citation/source requirements, class context, homework number, and explicit stance evidence from the user.
 2. Determine the `HW-x` number. If unknown, inspect existing `homework/HW-*.md` files and use the next available number.
 3. Check prior teacher feedback before research and drafting. See [feedback-workflow.md](feedback-workflow.md).
 4. Research the topic or use only provided sources when the assignment requires it. See [research-guidelines.md](research-guidelines.md).
 5. Present research notes and help the user choose or refine a thesis if needed.
 6. Use the strict draft gate in [draft-checklist.md](draft-checklist.md) before final prose.
-7. Draft, cite, check, and save the final homework record only after the user's stance is captured.
+7. Draft, cite, check, and save the final homework record only after the user's stance evidence is captured.
 
 ## Reference Files
 

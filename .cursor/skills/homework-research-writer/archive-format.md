@@ -9,6 +9,7 @@ Use this format when saving or updating completed homework records.
 - Create `homework/` if it does not exist when saving an assignment.
 - Write a new file for a new homework assignment, or update the existing matching file when revising.
 - Do not overwrite an existing `HW-x.md` for a different assignment; warn the user and ask before replacing unrelated content.
+- Do not save a completed final draft if the user's stance evidence is missing. Save research notes only if clearly labeled as notes, not as completed homework.
 
 ## Required Record Contents
 
