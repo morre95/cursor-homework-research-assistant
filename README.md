@@ -17,7 +17,7 @@ Cursor should discover the skill automatically when this repo is open.
 Open this repo in Cursor and ask Agent for homework help, for example:
 
 ```text
-Use the homework research writer skill to help me with HW-1.
+Use the homework research writer skill to help me with HW-X.
 The assignment is 1-2 pages about climate change and farming.
 ```
 
