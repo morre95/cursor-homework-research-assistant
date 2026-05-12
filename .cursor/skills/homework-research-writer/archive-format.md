@@ -16,7 +16,7 @@ Each homework markdown file should include enough context for future reference:
 
 - Homework number and title, if known
 - Assignment prompt and restrictions
-- User's stated opinion, thesis, or personal angle
+- User's stated opinion, selected thesis, or personal angle
 - Previous feedback used, if any
 - Research notes and source links
 - Final draft
